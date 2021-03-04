@@ -9,17 +9,15 @@ let heads = false;
 let choiceNum;
 if (choice == "heads") {
     choiceNum = 1; //heads is 1
-    heads = true;
 }
 else if(choice === "tails"){
     choiceNum = 0;  //tails is 0
-    heads = false;
 }
 
-if (choiceNum == coinFlip && heads(true)) {
+if (choiceNum == coinFlip && choice === "heads") {
     alert(" The flip was heads and you chose heads...you win\!");
 }
-if (coinFlip == choiceNum && heads(false)) {
+if (coinFlip == choiceNum && choice === "tails") {
     alert(" The flip was tails and you chose tails...you win\!");
 }
 if (coinFlip == 0 && choiceNum == 1){
@@ -31,4 +29,3 @@ if (coinFlip == 1 && choiceNum == 0){
 console.log(coinFlip);
 console.log(choice);
 console.log(choiceNum);
-console.log(heads);
